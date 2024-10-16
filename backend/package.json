@@ -1,0 +1,18 @@
+{
+    "name": "rule-engine-backend",
+    "version": "1.0.0",
+    "description": "Rule engine backend using Node.js and Express",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.21.1",
+        "mongoose": "^8.7.1",
+        "pg": "^8.13.0"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
