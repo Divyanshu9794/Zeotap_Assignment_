@@ -1,3 +1,5 @@
+# Assignment 1
+
 # Rule Engine with Abstract Syntax Tree (AST)
 
 ## Overview
@@ -36,9 +38,12 @@ class Node {
         this.value = value;      // Optional value for operand nodes
     }
 }
+```
 Database Schema
 The database schema for storing rules and application metadata is defined as follows:
 
+
+```
 javascript
 Copy code
 const ruleSchema = new mongoose.Schema({
@@ -54,7 +59,8 @@ const ruleSchema = new mongoose.Schema({
 Sample Rules
 Rule 1: ((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5)
 Rule 2: ((age > 30 AND department = 'Marketing')) AND (salary > 20000 OR experience > 5)
-Installation
+```
+# Installation
 Clone the repository:
 bash
 Copy code
@@ -96,7 +102,7 @@ Copy code
   ]
 }
 Response: Returns the combined AST.
-3. Evaluate Rule
+# 4. Evaluate Rule
 Endpoint: /evaluate_rule
 Method: POST
 Request Body:
@@ -113,7 +119,7 @@ Copy code
     "experience": 3
   }
 }
-Response: Returns true or false indicating eligibility based on the provided attributes.
+# Response: Returns true or false indicating eligibility based on the provided attributes.
 Test Cases
 Create individual rules from the provided examples and verify their AST representation using the create_rule endpoint.
 Combine example rules using the combine_rules endpoint and ensure the resulting AST reflects the combined logic.
@@ -145,3 +151,110 @@ Copy code
    git push origin main  # Replace 'main' with your branch name if different
 View on GitHub:
 Navigate to your GitHub repository, and you should see the README displayed on the main page.
+
+
+
+# Assignment 2
+
+
+```markdown
+# Weather Application
+
+A simple weather application built with Node.js, Express, and vanilla JavaScript that fetches weather data from the OpenWeatherMap API based on user input for a city.
+
+## Features
+
+- Users can enter a city name to retrieve current weather information.
+- Displays temperature and weather description.
+- Responsive and simple user interface with basic styling.
+
+## Technologies Used
+
+- **Node.js**: Server-side JavaScript runtime
+- **Express**: Web application framework for Node.js
+- **JavaScript**: For front-end functionality
+- **HTML/CSS**: For structuring and styling the webpage
+- **OpenWeatherMap API**: To fetch weather data
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version 12 or higher)
+- A valid API key from [OpenWeatherMap](https://openweathermap.org/api)
+
+### Installation
+
+1. **Clone the repository** or download the source code:
+
+   ```bash
+   git clone https://github.com/yourusername/weather-app.git
+   cd weather-app
+   ```
+
+2. **Install dependencies**:
+
+   ```bash
+   npm install express
+   ```
+
+3. **Obtain an API Key**:
+
+   Sign up at [OpenWeatherMap](https://openweathermap.org/api) to get your API key.
+
+4. **Set up your API key**:
+
+   Replace `YOUR_API_KEY` in the `script.js` file with your actual API key:
+
+   ```javascript
+   const apiKey = 'YOUR_API_KEY'; // Replace with your actual API key
+   ```
+
+### Running the Application
+
+1. Start the server:
+
+   ```bash
+   node server.js
+   ```
+
+2. Open your web browser and navigate to `http://localhost:3000`.
+
+3. Enter a city name in the input field and click the "Get Weather" button to see the current weather information.
+
+## Usage
+
+- **Input**: Enter the name of the city you want to check the weather for.
+- **Output**: The application will display the current temperature and weather conditions.
+
+## CSS Styling
+
+The application includes basic CSS styling to improve the visual presentation. You can customize the styles in the `styles.css` file.
+
+## Troubleshooting
+
+- If you encounter the message "City not found", ensure that the city name is spelled correctly and try again.
+- Check your browser console for any JavaScript errors if the application does not behave as expected.
+
+## Contributing
+
+Feel free to submit issues or pull requests. Contributions are welcome!
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgments
+
+- [OpenWeatherMap](https://openweathermap.org/api) for providing the weather data API.
+```
+
+### Instructions for the README
+
+- **Replace** `yourusername` in the clone URL with your GitHub username or the correct URL for your project repository.
+- Update any other details as necessary based on your project structure or additional features you might have added.
+
+This README provides a clear overview of the project, how to set it up, and how to use it, making it easier for others (or future you) to understand and work with your code.
+
+
+
